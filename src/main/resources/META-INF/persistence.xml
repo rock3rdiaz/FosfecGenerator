@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="SubsidioPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.comfenalco.admin.entity.Trabajadores</class>
+    <class>com.comfenalco.admin.entity.Beneficiarios</class>
+    <class>com.comfenalco.admin.entity.Empresas</class>
+    <class>com.comfenalco.admin.entity.MaestroAfiliados</class>
+    <class>com.comfenalco.admin.entity.Aportes</class>
+    <class>com.comfenalco.admin.entity.Dane</class>
+    <class>com.comfenalco.admin.entity.MaestroSubsidio</class>
+    <class>com.comfenalco.admin.entity.VRetiroIngresos</class>
+    <class>com.comfenalco.admin.entity.VPagosUnifica</class>
+    <properties>
+      <property name="eclipselink.canonicalmodel.subpackage" value="PU1"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://192.168.0.171:1433;databaseName=Subsidio"/>
+      <property name="javax.persistence.jdbc.password" value="sistemas"/>
+      <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+      <property name="javax.persistence.jdbc.user" value="sa"/>
+    </properties>
+  </persistence-unit>
+  <persistence-unit name="FosfecLocalPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.comfenalco.admin.entity.MaestroAfiliados</class>
+    <properties>
+      <property name="eclipselink.canonicalmodel.subpackage" value="PU2"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://192.168.0.171:1433;databaseName=DBFosfecLocal"/>
+      <property name="javax.persistence.jdbc.password" value="sistemas"/>
+      <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+      <property name="javax.persistence.jdbc.user" value="sa"/>
+    </properties>
+  </persistence-unit>
+</persistence>
